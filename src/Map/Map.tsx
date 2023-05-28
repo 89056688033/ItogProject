@@ -10,7 +10,6 @@ import {
 import React from 'react';
 import style from './Map.module.scss';
 import { render } from '@testing-library/react';
-import Olen from '../assets/GerbNN.png'
 
 const Application = () => <YMaps query={{ lang: 'en_RU' }}>Application with YMaps Provider</YMaps>;
 render(<Application />);

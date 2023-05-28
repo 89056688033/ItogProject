@@ -1,4 +1,4 @@
 export const routes = {
-  MAP: '/',
+  MAP: '/map',
   CARD: '/card',
 };
