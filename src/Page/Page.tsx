@@ -1,4 +1,4 @@
-import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
+import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import React from 'react';
 
 function Card() {
