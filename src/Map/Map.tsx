@@ -118,7 +118,8 @@ function Mape() {
             strokeColor: '#000',
             strokeWidth: 4,
             strokeOpacity: 0.5,
-          }} /><Polyline
+          }} />
+          <Polyline
           geometry={[
             [56.4212, 43.7368],
             [56.4221, 43.7387],
@@ -172,7 +173,8 @@ function Mape() {
             strokeColor: '#A62F00',
             strokeWidth: 4,
             strokeOpacity: 0.5,
-          }} /><Polyline
+          }} />
+          <Polyline
           geometry={[
             [56.4120, 43.7702],
             [56.4120, 43.7780],

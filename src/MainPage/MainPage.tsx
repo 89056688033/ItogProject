@@ -6,7 +6,7 @@ export function MainPage() {
   return (
     <div>
         <Legenda />
-    <div> Место для путешествия <Mape /> </div>
+    <div> <h1>Карта с маршрутами для активного отдыха (можно пройти за один день)</h1><Mape /> </div>
     </div>
   );
 }
