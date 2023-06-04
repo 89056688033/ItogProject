@@ -18,7 +18,7 @@ const getGeoLocation = async (ymaps: YMapsApi) => {
     );
 };
 
-const handleApiAvaliable = (ymaps: YMapsApi) => {
+export const handleApiAvaliable = (ymaps: YMapsApi) => {
   const geolocation = getGeoLocation(ymaps);
 };
 
@@ -27,7 +27,7 @@ export function GeoLocation() {
     <div>
       <YMaps>
         <Map
-          state={{ center: [0, 0], zoom: 9 }}
+          state={{ center: [56.3972, 43.7987], zoom: 12 }}
           modules={['geolocation', 'geocode']}
           onLoad={ymaps => { handleApiAvaliable(ymaps); }}
         />

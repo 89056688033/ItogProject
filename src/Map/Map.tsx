@@ -11,6 +11,7 @@ import React from 'react';
 import style from './Map.module.scss';
 import { render } from '@testing-library/react';
 import bk from '../assets/book.png'
+import { handleApiAvaliable } from './GeoLocation.tsx/GeoLocation';
 
 // const Application = () => <YMaps query={{ lang: 'en_RU' }}>Application with YMaps Provider</YMaps>;
 // render(<Application />);
@@ -33,8 +34,9 @@ function Mape() {
           zoom: 12,
           controls: ['zoomControl', 'fullscreenControl'],
         }}
-      >
-        <GeolocationControl options={{ float: 'left' }} />
+        modules={['geolocation', 'geocode']}
+       onLoad={ymaps => { handleApiAvaliable(ymaps); }}>
+        <GeolocationControl options={{ float: 'left' }} /> 
         <RouteButton options={{ float: 'right' }} />
         <RulerControl className={style.floatright} />
         <SearchControl className={style.floatright} />
