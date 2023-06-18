@@ -1,0 +1,54 @@
+@media screen and (max-width: 2400px)  {
+.title {
+  align-items: center;
+  font-family: 'Inter';
+  font-style: normal;
+  padding: auto;
+  margin: auto;
+  margin-top: 40px;
+  margin-left: 240px;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 29px;
+}
+.title1 {
+  font-family: 'Inter';
+  font-style: normal;
+  padding: auto;
+  margin: auto;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 240px;
+  align-items: center;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 29px; 
+}
+.text {
+    font-family: 'Inter';
+    font-style: normal;
+    padding: auto;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 20px;
+    font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  }
+}
+@media screen and (max-width: 1038px)  {
+  .title1 {
+    font-family: 'Inter';
+    font-style: normal;
+    padding: auto;
+    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 100px;
+    align-items: center;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 25px; 
+  }
+}

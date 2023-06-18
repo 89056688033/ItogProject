@@ -1,16 +1,19 @@
+@media screen and (max-width: 2400px)  {
 .container {
   font-family: 'Inter';
   font-style: normal;
   display: flex;
-  width: auto;
+  width: 100%;
     height: auto;
     margin: auto;
     align-items: center;
-  .rectangle {
+    margin-left: 40px;
+    margin-right: 40px;
+    .rectangle {
     margin-left: 13px;
     width: 120px;
     height: 62px;
-    background: #000;
+    background: #808080;
   }
   .rectangle1 {
     margin-left: 13px;
@@ -51,11 +54,31 @@
   .textOfColor{
     text-decoration: none;
   }
-  .title{
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 29px;
-    margin-left: 10px;
-    padding: auto;
+}
+.title{
+  font-family: 'Inter';
+  font-style: normal;
+  align-items: center;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 29px;
+  margin-left: 540px;
+  margin-top: 60px;
   }
+}
+@media screen and (max-width: 1190px)  {
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .title{
+    font-family: 'Inter';
+    font-style: normal;
+    align-items: center;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 29px;
+    margin-left: 340px;
+    margin-top: 60px;
+    }
 }

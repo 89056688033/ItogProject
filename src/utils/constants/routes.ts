@@ -1,4 +1,5 @@
 export const routes = {
-  MAP: '/map',
-  CARD: '/card',
+  MAIN: '/',
+  CBOR: '/Cbor',
+  POTERYA: '/Poterya',
 };

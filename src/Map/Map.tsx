@@ -1,92 +1,115 @@
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
 import {
   YMaps,
   Map,
   Placemark,
-  Rectangle,
-  Panorama,
   Polyline,
   GeolocationControl,
-  RouteButton,
-  Circle,
   RulerControl,
   SearchControl,
   TrafficControl,
   TypeSelector,
-  RouteEditor,
+  RouteEditor, Polygon, RouteButton,
 } from 'react-yandex-maps';
 import React from 'react';
 import style from './Map.module.scss';
-import { render } from '@testing-library/react';
-import placemarkIcon from '../assets/book.png';
-import { handleApiAvaliable } from './GeoLocation.tsx/GeoLocation';
+import placemarkIcon from '../assets/Dub (2).png';
+import plamPrir from '../assets/LDub.png';
+import Jelud from '../assets/Jelud.png';
+import VolRiv from '../assets/River_Water.png';
+import Beach from '../assets/Beach3.png';
+import Lake from '../assets/Lake.png';
+import River from '../assets/River.png';
+import Beach2 from '../assets/Beach2.png';
 
+import { handleApiAvaliable } from './GeoLocation.tsx/GeoLocation';
+// import { useSelector } from 'react-redux'
 // const Application = () => <YMaps query={{ lang: 'en_RU' }}>Application with YMaps Provider</YMaps>;
 // render(<Application />);
 
 // Этот компонент используется для обеспечения компонентов YMaps контекстом API Яндекс.Карт. Вам всегда нужно добавлять этот компонент где-то над вашими картами в дереве компонентов.
-const mapState = { center: [56.4087, 43.7742], zoom: 10 }
 function Mape() {
-  // const addRoute = (ymaps: { multiRouter: { MultiRoute: new (arg0: { referencePoints: (string | number[])[]; params: { routingMode: string; }; }, arg1: { boundsAutoApply: boolean; }) => any; }; }) => {
-  //   const pointA = [55.749, 37.524];
-  //   const pointB = [56.3972, 43.7987];
-
-  //   const multiRoute = new ymaps.multiRouter.MultiRoute(
-  //     {
-  //       referencePoints: [pointA, pointB],
-  //       params: {
-  //         routingMode: 'pedestrian'
-  //       }
-  //     },
-  //     {
-  //       boundsAutoApply: true
-  //     }
-  //   );
-  //   Map.current.geoObjects.add(multiRoute);
-  // };
   return (
-  <><YMaps
+    <>
+      <YMaps
         query={{
           ns: 'use-load-option',
           load: 'Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon',
-          apikey: '53fc8636-c873-48cd-9f85-954fe7cad961'
+          // apikey: '53fc8636-c873-48cd-9f85-954fe7cad961',
         }}
       >
         <Map
           className={style.map}
           defaultState={{
             center: [56.3972, 43.7987],
-            zoom: 12,
+            zoom: 12.4,
             controls: ['zoomControl', 'fullscreenControl'],
           }}
           modules={['geolocation', 'geocode', 'multiRouter.MultiRoute']}
           onLoad={(ymaps) => {
             handleApiAvaliable(ymaps);
-            // addRoute;
           }}
-          // module={['multiRouter.MultiRoute']}
-          // state={mapState}
-          // instanceRef={map}
         >
           <GeolocationControl options={{ float: 'left' }} />
-          <RouteButton options={{ float: 'right' }}/>
+          <RouteButton options={{ float: 'right' }} />
           <RulerControl className={style.floatright} />
           <SearchControl className={style.floatright} />
           <TrafficControl className={style.floatright} />
           <RouteEditor />
           <TypeSelector className={style.floatright} />
-          <Panorama defaultPoint={[56.3972, 43.7987]} />
+          {/* <RoutePanel options={{ float: 'right' }} /> */}
+          {/* <Panorama defaultPoint={[56.3972, 43.7987]} /> */}
           <Placemark
-            defaultGeometry={[56.3972, 43.7987]}
+            geometry={[56.3928, 43.8607]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: Beach2,
+              iconImageSize: [32, 32],
+            }}
             properties={{
-              balloonContentBody:
-                'Берег Волги. Очень красивые виды, природа корабли, песочные пляжи. Весной и осенью дорога затоплена.',
+              hintContent: 'Пляж',
+              balloonContent:
+                'Пляж',
             }}
           />
           <Placemark
-            defaultGeometry={[56.4221, 43.7384]}
+            geometry={[56.3989, 43.7929]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: Lake,
+              iconImageSize: [32, 32],
+              iconImageOffset: [-3, -42]
+            }}
             properties={{
-              balloonContentBody:
-                'Берег Волги. Очень красивые виды, природа корабли, песочные пляжи. Весной и осенью дорога через никольский рукав затоплена.',
+              hintContent: 'Берег Волги',
+              balloonContent: 'Озеро в дубовом лесу',
+            }}
+          />
+          <Placemark
+            geometry={[56.4250, 43.7281]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: River,
+              iconImageSize: [32, 32],
+              // iconImageOffset: [-3, -42]
+            }}
+            properties={{
+              hintContent: 'Река Пыра',
+              balloonContent: 'Река Пыра впадает в Волгу, есть пляж для купания',
+            }}
+          />
+          <Placemark
+            geometry={[56.4185, 43.815]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: Beach,
+              iconImageSize: [32, 32],
+              iconImageOffset: [-3, -42]
+            }}
+            properties={{
+              hintContent: 'Берег Волги',
+              balloonContent:
+                'Вся северная часть о.Ревякского представляет собой полосу из чистого песка',
             }}
           />
           <Placemark
@@ -96,56 +119,171 @@ function Mape() {
                 'Нижний Новгород был основан в 1221 году у места слияния великих русских рек – Волги и Оки князем Юрием (Георгием) Всеволодовичем как опорный пункт обороны русских границ от мордвы, черемисов и татар. Город получил название «Нижний», как предполагают историки, из-за расположения в «низовских» землях относительно Новгорода Великого.',
             }}
           />
-          <Circle
-            geometry={[[56.3809, 43.8503], 1010]}
-            options={{
-              draggable: false,
-              fillColor: '#DB709377',
-              strokeColor: '#1CAC78',
-              strokeOpacity: 0.8,
-              strokeWidth: 5,
-            }}
-          />
-          <Circle
-            geometry={[[56.3954, 43.803], 300]}
-            options={{
-              draggable: false,
-              fillColor: '#DB709377',
-              strokeColor: '#1CAC78',
-              strokeOpacity: 0.8,
-              strokeWidth: 5,
-            }}
-          />
-          <Rectangle
+          <Polygon
             geometry={[
-              [56.4064, 43.776],
-              // [56.4089, 43.7766],
-              // [56.4105, 43.7698],
-              [56.4098, 43.7684],
+              [
+                [56.411, 43.7703],
+                [56.4099, 43.7743],
+                [56.4094, 43.778],
+                [56.4052, 43.7784],
+                [56.4097, 43.7682],
+              ],
             ]}
             options={{
-              draggable: false,
-              fillColor: '#ffff0022',
-              strokeColor: '#3caa3c88',
-              strokeWidth: 7,
+              fillColor: '#00FF00',
+              strokeColor: '#0000FF',
+              opacity: 0.5,
+              strokeWidth: 5,
+              strokeStyle: 'shortdash',
             }}
           />
-      {
-  /* <Map state={mapState}> */
-}
-<Placemark
-geometry={[56.4077, 43.7742]}
-  options={{
-    iconLayout: 'default#image',
-    iconImageHref: placemarkIcon,
-    iconImageSize: [32, 32],
-  }}
-  properties={{
-    hintContent: 'Дубовый лес',
-    balloonContent: 'Дубовый лес у берега Никольского рукава',
-  }}
-/>;
-          {/* </Map> */}
+          <Polygon
+            geometry={[
+              [
+                [56.3935, 43.7928],
+                [56.3946, 43.7912],
+                [56.3957, 43.7983],
+                [56.3983, 43.806],
+                [56.3981, 43.8119],
+                [56.3965, 43.8158],
+                [56.3917, 43.8007],
+                [56.393, 43.7966],
+              ],
+            ]}
+            options={{
+              fillColor: '#00FF00',
+              strokeColor: '#0000FF',
+              opacity: 0.5,
+              strokeWidth: 5,
+              strokeStyle: 'shortdash',
+            }}
+          />
+          <Polygon
+            geometry={[
+              [
+                [56.3849, 43.8371],
+                [56.3847, 43.8370],
+                [56.3843, 43.8364],
+                [56.3842, 43.8363],
+                [56.3823, 43.8341],
+                [56.3821, 43.8342],
+                [56.3820, 43.8343],
+                [56.3797, 43.8376],
+                [56.3797, 43.8378],
+                [56.3791, 43.8389],
+                [56.3788, 43.8397],
+                [56.3785, 43.8388],
+                [56.3785, 43.8383],
+                [56.3787, 43.8378],
+                [56.3787, 43.8375],
+                [56.3785, 43.8375],
+                [56.3779, 43.8382],
+                [56.3778, 43.8381],
+                [56.3781, 43.8373],
+                [56.3781, 43.8369],
+                [56.3779, 43.8368],
+                [56.3778, 43.8364],
+                [56.3781, 43.8356],
+                [56.3780, 43.8354],
+                [56.3775, 43.8349],
+                [56.3740, 43.8379],
+                [56.3704, 43.8443],
+                [56.3704, 43.8446],
+                [56.3727, 43.8532],
+                [56.3727, 43.8532],
+                [56.3727, 43.8534],
+                [56.3726, 43.8537],
+                [56.3737, 43.8572],
+                [56.3741, 43.8578],
+                [56.3746, 43.8595],
+                [56.3747, 43.8596],
+                [56.3748, 43.8595],
+                [56.3756, 43.8554],
+                [56.3755, 43.8554],
+                [56.3755, 43.8552],
+                [56.3769, 43.8531],
+                [56.3774, 43.8527],
+                [56.3778, 43.8525],
+                [56.3778, 43.8524],
+                [56.3781, 43.8516],
+                [56.3781, 43.8514],
+                [56.3780, 43.8513],
+                [56.3779, 43.8513],
+                [56.3779, 43.8512],
+                [56.3779, 43.8510],
+                [56.3783, 43.8496],
+                [56.3799, 43.8488],
+                [56.3800, 43.8485],
+                [56.3802, 43.8472],
+                [56.3803, 43.8461],
+                [56.3803, 43.8457],
+                [56.3811, 43.8445],
+                [56.3811, 43.8437],
+                [56.3812, 43.8433],
+              ],
+            ]}
+            options={{
+              fillColor: '#00FF00',
+              strokeColor: '#0000FF',
+              opacity: 0.5,
+              strokeWidth: 5,
+              strokeStyle: 'shortdash',
+            }}
+          />
+          {/* <Placemark
+            geometry={[56.4251, 43.7288]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: River,
+              iconImageSize: [32, 32],
+            }}
+            properties={{
+              hintContent: 'Дубовый лес',
+              balloonContent: 'Место впадения реки Пыра в Волгу, есть место для купания',
+            }}
+          /> */}
+          <Placemark
+            geometry={[56.4077, 43.7742]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: Jelud,
+              iconImageSize: [32, 32],
+              // iconImageOffset: [-3, -42]
+            }}
+            properties={{
+              hintContent: 'Дубовый лес',
+              balloonContent: 'Дубовый лес у берега Никольского рукава',
+            }}
+          />
+          <Placemark
+            geometry={[56.3954, 43.803]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: placemarkIcon,
+              iconImageSize: [42, 42],
+              iconImageOffset: [-3, -42]
+            }}
+            properties={{
+              hintContent: 'Дубрава',
+              balloonContent: 'Дубрава у озера Лунского',
+            }}
+          />
+          ;
+          <Placemark
+            geometry={[56.3772, 43.8447]}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: plamPrir,
+              iconImageSize: [42, 42],
+              iconImageOffset: [-3, -42],
+            }}
+            properties={{
+              hintContent: 'Памятник природы регионального значения Копосовская дубрава',
+              balloonContent:
+                'Памятник природы регионального значения Копосовская дубрава. Представляет собой массив естественного широколиственного леса у п. Копосово в Сормовском районе. Копосовская дубрава отличается однородным составом древостоя. Она сложена одной древесной породой - дубом, без участия липы, клена, вяза, ясеня, так типичных для дубрав области, хотя в подросте эти породы в отдельных местах Копосовской дубравы встречаются. Эта дубрава - одна из самых старых пойменных дубрав Нижегородской области. Дуб здесь имеет возраст не менее 200 - 250 лет, достигает высоты 20 - 25 м и диаметра ствола от 40 до 80 см. ',
+            }}
+          />
+          ;
           <Polyline
             geometry={[
               [56.412, 43.7288],
@@ -166,6 +304,10 @@ geometry={[56.4077, 43.7742]}
               strokeWidth: 4,
               strokeOpacity: 0.5,
             }}
+            properties={{
+              hintContent: 'река Пыра',
+              balloonContent: 'Маршрут вдоль лугов и берега реки Пыра',
+            }}
           />
           <Polyline
             geometry={[
@@ -184,6 +326,10 @@ geometry={[56.4077, 43.7742]}
               strokeColor: '#1F75FE',
               strokeWidth: 4,
               strokeOpacity: 0.5,
+            }}
+            properties={{
+              hintContent: 'Волга',
+              balloonContent: 'Маршрут по о. Ревякинский, вдоль берега Волги',
             }}
           />
           <Polyline
@@ -222,6 +368,10 @@ geometry={[56.4077, 43.7742]}
               strokeColor: '#A62F00',
               strokeWidth: 4,
               strokeOpacity: 0.5,
+            }}
+            properties={{
+              hintContent: 'Никольский рукав',
+              balloonContent: 'Маршрут вдоль Никольского рукава, через дубраву и луга ',
             }}
           />
           <Polyline
@@ -295,6 +445,10 @@ geometry={[56.4077, 43.7742]}
               strokeWidth: 4,
               strokeOpacity: 0.5,
             }}
+            properties={{
+              hintContent: 'о. Ревякинский',
+              balloonContent: 'Маршрут по о. Ревякинский,дорога была, после переправы по мосту с острова на велосипедах или пешком (выезд для машин перекрыт шлагбаумом). Дорога для машин отмечена коричневым цветом.',
+            }}
           />
           <Polyline
             geometry={[
@@ -325,6 +479,10 @@ geometry={[56.4077, 43.7742]}
               strokeWidth: 4,
               strokeOpacity: 0.5,
             }}
+            properties={{
+              hintContent: 'Никольский рукав',
+              balloonContent: 'Маршрутyт на машине от о. Ревякинский',
+            }}
           />
           <Polyline
             geometry={[
@@ -341,6 +499,10 @@ geometry={[56.4077, 43.7742]}
               strokeColor: '#3450F9',
               strokeWidth: 4,
               strokeOpacity: 0.5,
+            }}
+            properties={{
+              hintContent: 'Пляж',
+              balloonContent: 'Дорога на пляж реки Волги',
             }}
           />
         </Map>
