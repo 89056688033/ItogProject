@@ -21,16 +21,10 @@ import Beach from '../assets/Beach3.png';
 import Lake from '../assets/Lake.png';
 import River from '../assets/River.png';
 import Beach2 from '../assets/Beach2.png';
-
 import { handleApiAvaliable } from './GeoLocation.tsx/GeoLocation';
-// import { useSelector } from 'react-redux'
-// const Application = () => <YMaps query={{ lang: 'en_RU' }}>Application with YMaps Provider</YMaps>;
-// render(<Application />);
 
-// Этот компонент используется для обеспечения компонентов YMaps контекстом API Яндекс.Карт. Вам всегда нужно добавлять этот компонент где-то над вашими картами в дереве компонентов.
 function Mape() {
   return (
-    <>
       <YMaps
         query={{
           ns: 'use-load-option',
@@ -230,18 +224,6 @@ function Mape() {
               strokeStyle: 'shortdash',
             }}
           />
-          {/* <Placemark
-            geometry={[56.4251, 43.7288]}
-            options={{
-              iconLayout: 'default#image',
-              iconImageHref: River,
-              iconImageSize: [32, 32],
-            }}
-            properties={{
-              hintContent: 'Дубовый лес',
-              balloonContent: 'Место впадения реки Пыра в Волгу, есть место для купания',
-            }}
-          /> */}
           <Placemark
             geometry={[56.4077, 43.7742]}
             options={{
@@ -507,7 +489,6 @@ function Mape() {
           />
         </Map>
       </YMaps>
-    </>
   );
 }
 

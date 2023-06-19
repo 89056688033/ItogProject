@@ -1,4 +1,4 @@
-@media screen and (max-width: 2400px)  {
+@media screen and (max-width: 2000px)  {
 .title {
   align-items: center;
   font-family: 'Inter';
@@ -33,11 +33,11 @@
     margin-left: 40px;
     margin-right: 20px;
     font-weight: 300;
-  font-size: 20px;
-  line-height: 25px;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
-@media screen and (max-width: 1038px)  {
+@media screen and (max-width: 1000px)  {
   .title1 {
     font-family: 'Inter';
     font-style: normal;
@@ -48,7 +48,19 @@
     margin-left: 100px;
     align-items: center;
     font-weight: 800;
-    font-size: 23px;
+    font-size: 22px;
     line-height: 25px; 
+  }
+  .title {
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    padding: auto;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 27px;
   }
 }

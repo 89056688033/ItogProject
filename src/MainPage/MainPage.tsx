@@ -27,5 +27,5 @@ export function MainPage() {
 <h1 className={styles.title1}>Дубрава у озера Лунского</h1>
 <p className={styles.text}>Так же у Озера Лунского есть дубрава и место для купания у Озера Лунского и по берегам реки Черной.</p>
  <Legenda />
-   <h1 className={styles.title1}>Карта с маршрутами для активного отдыха (можно пройти за один день)</h1> <Mape /></div>);
+   <h1 className={styles.title1}>Карта с маршрутами для активного отдыха (можно пройти за один день)</h1><Mape /></div>);
 }

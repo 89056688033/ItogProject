@@ -12,14 +12,14 @@ export const Footer = () => {
       </div>
       <div className={classes.footer__menuWrap}>
         <div className={classes.footer__menu}>
-        <Link to={routes.MAIN}><div className={classes.footer__menu__title}>
+        <Link className={classes.footer__menu__title} to={routes.MAIN}><div>
             Природа Сормово
             <br />
-            и его пригорода
+            и пригорода
           </div>
           </Link>
           <div className={classes.footer__menu__list}>
-          <p> Авторское право © 2023. Все права защищены</p>
+          <p className={classes.footer__menu__list}> Авторское право © 2023. Все права защищены</p>
           </div>
         </div>
       </div>
