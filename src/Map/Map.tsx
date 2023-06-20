@@ -250,7 +250,6 @@ function Mape() {
               balloonContent: 'Дубрава у озера Лунского',
             }}
           />
-          ;
           <Placemark
             geometry={[56.3772, 43.8447]}
             options={{
@@ -265,7 +264,6 @@ function Mape() {
                 'Памятник природы регионального значения Копосовская дубрава. Представляет собой массив естественного широколиственного леса у п. Копосово в Сормовском районе. Копосовская дубрава отличается однородным составом древостоя. Она сложена одной древесной породой - дубом, без участия липы, клена, вяза, ясеня, так типичных для дубрав области, хотя в подросте эти породы в отдельных местах Копосовской дубравы встречаются. Эта дубрава - одна из самых старых пойменных дубрав Нижегородской области. Дуб здесь имеет возраст не менее 200 - 250 лет, достигает высоты 20 - 25 м и диаметра ствола от 40 до 80 см. ',
             }}
           />
-          ;
           <Polyline
             geometry={[
               [56.412, 43.7288],
@@ -281,7 +279,7 @@ function Mape() {
               [56.4212, 43.7368],
             ]}
             options={{
-              balloonCloseButton: false,
+              balloonCloseButton: true,
               strokeColor: '#000',
               strokeWidth: 4,
               strokeOpacity: 0.5,
@@ -304,7 +302,7 @@ function Mape() {
               [56.4102, 43.777],
             ]}
             options={{
-              balloonCloseButton: false,
+              balloonCloseButton: true,
               strokeColor: '#1F75FE',
               strokeWidth: 4,
               strokeOpacity: 0.5,
@@ -346,7 +344,7 @@ function Mape() {
               [56.3872, 43.773],
             ]}
             options={{
-              balloonCloseButton: false,
+              balloonCloseButton: true,
               strokeColor: '#A62F00',
               strokeWidth: 4,
               strokeOpacity: 0.5,
@@ -422,7 +420,7 @@ function Mape() {
               [56.3849, 43.8375],
             ]}
             options={{
-              balloonCloseButton: false,
+              balloonCloseButton: true,
               strokeColor: '#F93446',
               strokeWidth: 4,
               strokeOpacity: 0.5,
@@ -456,7 +454,7 @@ function Mape() {
               [56.3803, 43.8316],
             ]}
             options={{
-              balloonCloseButton: false,
+              balloonCloseButton: true,
               strokeColor: '#F97E34',
               strokeWidth: 4,
               strokeOpacity: 0.5,
@@ -477,7 +475,7 @@ function Mape() {
               [56.3924, 43.8602],
             ]}
             options={{
-              balloonCloseButton: false,
+              balloonCloseButton: true,
               strokeColor: '#3450F9',
               strokeWidth: 4,
               strokeOpacity: 0.5,

@@ -7,8 +7,8 @@
   height: auto;
   margin: auto;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 25px;
+  margin-right: 25px;
     .rectangle {
     margin-left: 12px;
     width: 100%;
@@ -68,76 +68,301 @@
   font-weight: 800;
   font-size: 25px;
   line-height: 29px;
-  margin-left: 540px;
+  // margin-left: 540px;
   margin-top: 60px;
+  text-align: center;
   }
 }
-// @media screen and (max-width: 1700px)  {
-//   .container {
-//     font-family: 'Inter';
-//     font-style: normal;
-//     justify-content: space-between;
-//     display: flex;
-//     width: auto;
-//     height: auto;
-//     margin: auto;
-//     align-items: center;
-//     margin-left: 0px;
-//     margin-right: 0px;
-//     .rectangle {
-//       margin-left: 13px;
-//       max-width: 120px;
-//       height: 62px;
-//       background: #808080;
-//     }
-//     .rectangle1 {
-//       margin-left: 13px;
-//       max-width: 100%;
-//       height: 62px;
-//       background: #1F75FE;
-//     }
-//     .rectangle2 {
-//       margin-left: 13px;
-//       max-width: 100%;
-//       height: 62px;
-//       background: #A62F00;
-//     }
-//     .rectangle3 {
-//       margin-left: 13px;
-//       max-width: 100%;
-//       height: 62px;
-//       background: #F93446;
-//     }
-//     .rectangle4 {
-//       margin-left: 13px;
-//       max-width: 100%;
-//       height: 62px;
-//       background: #F97E34;
-//     }
-//     .rectangle5 {
-//       margin-left: 13px;
-//       max-width: 100%;
-//       height: 62px;
-//       background: #3450F9;
-//     }
-//     .textarea{
-//       margin-left: 13px;
-//       width: 200px;
-//       height: 55px;
+@media screen and (max-width: 1000px)  {
+  .container {
+    font-family: 'Inter';
+    font-style: normal;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto ;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+      .rectangle {
+      margin-left: 12px;
+      width: 100%;
+      height: 62px;
+      background: #808080;
+    }
+    .rectangle1 {
+      margin-left: 12px;
+      width: 100%;
+      height: 62px;
+      background: #1F75FE;
+    }
+    .rectangle2 {
+      margin-left: 12px;
+      width: 100%;
+      height: 62px;
+      background: #A62F00;
+    }
+    .rectangle3 {
+      margin-left: 12px;
+      width: 100%;
+      height: 62px;
+      background: #F93446;
+    }
+    .rectangle4 {
+      margin-left: 12px;
+      width: 100%;
+      height: 62px;
+      background: #F97E34;
+    }
+    .rectangle5 {
+      margin-left: 12px;
+      width: 100%;
+      height: 62px;
+      background: #3450F9;
+    }
+    .textarea{
+      margin-left: 12px;
+      width: 100%;
+      height: 55px;
   
-//     }
-//     .textOfColor{
-//       text-decoration: none;
-//     }
-//   }
-//   .title{
-//     font-family: 'Inter';
-//     font-style: normal;
-//     align-items: center;
-//     font-weight: 800;
-//     font-size: 25px;
-//     line-height: 29px;
-//     margin-left: 340px;
-//     margin-top: 60px;
-//     }
-// }
+    }
+    .textarea{
+      margin-left: 12px;
+      width: 100%;
+      height: 55px;
+  
+    }
+    .textOfColor{
+      text-decoration: none;
+    }
+  }
+  .title{
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 29px;
+    margin:0;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    }
+  }
+  @media screen and (max-width: 700px)  {
+    .container {
+      font-family: 'Inter';
+      font-style: normal;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: auto auto auto auto auto auto ;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+        .rectangle {
+        margin-left: 12px;
+        width: 100%;
+        height: 100%;
+        background: #808080;
+      }
+      .rectangle1 {
+        margin-left: 12px;
+        width: 100%;
+        height: 100%;
+        background: #1F75FE;
+      }
+      .rectangle2 {
+        margin-left: 12px;
+        width: 100%;
+        height: 100%;
+        background: #A62F00;
+      }
+      .rectangle3 {
+        margin-left: 12px;
+        width: 100%;
+        height: 100%;
+        background: #F93446;
+      }
+      .rectangle4 {
+        margin-left: 12px;
+        width: 100%;
+        height: 100%;
+        background: #F97E34;
+      }
+      .rectangle5 {
+        margin-left: 12px;
+        width: 100%;
+        height: 100%;
+        background: #3450F9;
+      }
+
+      .textarea{
+        margin-left: 12px;
+        width: 100%;
+        height: auto;
+    
+      }
+      .textOfColor{
+        text-decoration: none;
+      }
+    }
+    .title{
+      font-family: 'Inter';
+      font-style: normal;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 25px;
+      margin:0;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+      }
+    }
+      @media screen and (max-width: 600px)  {
+        .container {
+          font-family: 'Inter';
+          font-style: normal;
+          display: grid;
+          gap:2px;
+          grid-column: auto;
+          max-width: 100%;
+          height: 100%;
+          margin: auto;
+          margin-left: 5px;
+          margin-right: 5px;
+            .rectangle {
+            margin-left: 2px;
+            width: 50px;
+            height: 100%;
+            background: #808080;
+          }
+          .rectangle1 {
+            margin-left: 1px;
+            width: 50px;
+            height: 100%;
+            background: #1F75FE;
+          }
+          .rectangle2 {
+            margin-left: 1px;
+            width: 50px;
+            height: 100%;
+            background: #A62F00;
+          }
+          .rectangle3 {
+            margin-left: 1px;
+            width: 50px;
+            height: 100%;
+            background: #F93446;
+          }
+          .rectangle4 {
+            margin-left: 1px;
+            width: 50px;
+            height: 100%;
+            background: #F97E34;
+          }
+          .rectangle5 {
+            margin-left: 1px;
+            width: 50px;
+            height: 100%;
+            background: #3450F9;
+          }
+    
+          .textarea{
+            margin-left: 1px;
+            width: 100%;
+            height: 100%;
+        
+          }
+          .textOfColor{
+            text-decoration: none;
+          }
+        }
+        .title{
+          font-family: 'Inter';
+          font-style: normal;
+          text-align: center;
+          font-weight: 510;
+          font-size: 17px;
+          line-height: 15px;
+          margin:0;
+          margin-top: 12px;
+          margin-bottom: 15px;
+          text-align: center;
+          }
+        }
+        @media screen and (max-width: 320px)  {
+          .container {
+            font-family: 'Inter';
+            font-style: normal;
+            display: grid;
+            gap:2px;
+            grid-column: auto;
+            max-width: 100%;
+            height: 100%;
+            margin: auto;
+            margin-left: 5px;
+            margin-right: 5px;
+              .rectangle {
+              margin-left: 2px;
+              width: 40px;
+              height: 100%;
+              background: #808080;
+            }
+            .rectangle1 {
+              margin-left: 1px;
+              width: 40px;
+              height: 100%;
+              background: #1F75FE;
+            }
+            .rectangle2 {
+              margin-left: 1px;
+              width: 40px;
+              height: 100%;
+              background: #A62F00;
+            }
+            .rectangle3 {
+              margin-left: 1px;
+              width: 40px;
+              height: 100%;
+              background: #F93446;
+            }
+            .rectangle4 {
+              margin-left: 1px;
+              width: 40px;
+              height: 100%;
+              background: #F97E34;
+            }
+            .rectangle5 {
+              margin-left: 1px;
+              width: 40px;
+              height: 100%;
+              background: #3450F9;
+            }
+      
+            .textarea{
+              margin-left: 1px;
+              width: 100%;
+              height: 100%;
+          
+            }
+            .textOfColor{
+              text-decoration: none;
+            }
+          }
+          .title{
+            font-family: 'Inter';
+            font-style: normal;
+            text-align: center;
+            font-weight: 510;
+            font-size: 17px;
+            line-height: 15px;
+            margin:0;
+            margin-top: 12px;
+            margin-bottom: 15px;
+            text-align: center;
+            }
+          }

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Footer.module.scss';
 import img from '../assets/GerbNN.png';
+import Nastr from '../assets/water_chaika.png'
 import { routes } from '../utils/constants/routes';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +20,8 @@ export const Footer = () => {
           </div>
           </Link>
           <div className={classes.footer__menu__list}>
-          <p className={classes.footer__menu__list}> Авторское право © 2023. Все права защищены</p>
+          <p className={classes.footer__menu__list_a}> Авторское право © 2023. Хорошей погоды и позитивного настроения.</p>
+          <img className={classes.footer__img1} src={Nastr} alt="" />
           </div>
         </div>
       </div>
