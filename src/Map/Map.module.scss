@@ -1,4 +1,4 @@
-// @media screen and (max-width: 2950px)  {
+@media screen and (max-width: 2950px)  {
     .map{
     height: 500px;
     width: 100%;
@@ -10,7 +10,20 @@
         float:right;
         width: 100%;}
 }
-// }
+}
+@media screen and (max-width: 670px)  {
+    .map{
+    height: 500px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    .floatright {
+        float:right;
+        width: 100%;}
+}
+}
 // @media screen and (max-width: 1681px)  {
 //     .map{
 //         height: 500px;
