@@ -33,15 +33,15 @@ export const Header = () => {
               nav ? [classes.menu, classes.active].join(' ') : [classes.menu]
             }
           >
-            <li className={classes.li}>
+            <li className={classes.li1}>
             <Link className={classes.header__menu__list} to={routes.CBOR}>Как собраться в однодневный поход</Link>
             </li>
-            <li className={classes.li}>
+            <li className={classes.li2}>
             <Link className={classes.header__menu__list} to={routes.POTERYA}>Что делать если Вы потерялись</Link>
             </li>
           </ul>
           <div onClick={() => { setNav(!nav); }} className={classes.mobile_btn}>
-            {nav ? <AiOutlineClose size={65} /> : <AiOutlineMenu size={65} />}
+            {nav ? <AiOutlineClose size={60} /> : <AiOutlineMenu size={60} />}
           </div>
           </div>
           </div>
