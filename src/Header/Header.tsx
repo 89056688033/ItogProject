@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Header.module.scss';
 import img from '../assets/GerbNN.png';
+// import Poterya from '../assets/Poterya8.png';
 import { routes } from '../utils/constants/routes';
 import { Link } from 'react-router-dom';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 export const Header = () => {
+  const [nav, setNav] = useState(false);
   return (
-    <div className={classes.header}>
+    <nav className={classes.header}>
       <div>
       <Link to={routes.MAIN}> <img className={classes.header__img} src={img} alt="" /></Link>
       </div>
@@ -18,12 +21,30 @@ export const Header = () => {
             и  пригорода
           </div>
           </Link>
-          <div className={classes.header__menu__list}>
+          {/* <ul className ={ nav ? [classes.header__menu__list, classes.active].join(' ') : [classes.header__menu__list]}>
+          <li> <a href="Link to={routes.CBOR}">Как собраться в однодневный поход</a></li>
+          <li><Link className={classes.header__menu__list} to={routes.POTERYA}>Что делать если Вы потерялись</Link></li>
+          </ul>
+          <div onClick={() => { setNav(!nav); }} className={classes.mobile_btn}>
+            {nav ? <AiOutlineClose size={45} /> : <AiOutlineMenu size={45} />}
+          </div> */}
+          <ul
+            className={
+              nav ? [classes.menu, classes.active].join(' ') : [classes.menu]
+            }
+          >
+            <li className={classes.li}>
             <Link className={classes.header__menu__list} to={routes.CBOR}>Как собраться в однодневный поход</Link>
+            </li>
+            <li className={classes.li}>
             <Link className={classes.header__menu__list} to={routes.POTERYA}>Что делать если Вы потерялись</Link>
+            </li>
+          </ul>
+          <div onClick={() => { setNav(!nav); }} className={classes.mobile_btn}>
+            {nav ? <AiOutlineClose size={65} /> : <AiOutlineMenu size={65} />}
           </div>
-        </div>
-      </div>
-  </div>
+          </div>
+          </div>
+  </nav>
   );
 };

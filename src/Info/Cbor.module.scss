@@ -1,0 +1,49 @@
+@media screen and (max-width: 2000px)  {
+    .container {
+        margin-left: 35px;
+        margin-right: 20px;
+        margin-bottom: 55px;
+        
+        .title1 {
+            font-family: 'Inter';
+            font-style: normal;
+            padding: auto;
+            margin: auto;
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+            align-items: center;
+            font-weight: 750;
+            font-size: 24px;
+            line-height: 29px; 
+        }
+        .list{
+            list-style-image: url('../assets/tyrist1.png'); 
+        //    width: 25px;
+        //    height: 15px;
+            font-family: 'Inter';
+            font-style: normal;
+            padding: auto;
+            margin-top: 40px;
+            margin-right: 20px;
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 25px;
+            margin-bottom: 25px;
+            text-align:justify;
+        }
+        .text {
+            font-family: 'Inter';
+            font-style: normal;
+            padding: auto;
+            margin: auto;
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-right: 20px;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 25px;
+            text-align:justify;
+        }  
+        }     
+}
